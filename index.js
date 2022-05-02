@@ -33,6 +33,21 @@ async function run() {
 
             res.send(inventory);
         })
+
+        /* app.put('/inventory/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+
+                },
+            };
+            const result = await inventoriesCollection.updateOne(filter, updateDoc, options);
+
+            res.send(inventory);
+        }) */
+
     }
     finally {
 
