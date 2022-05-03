@@ -51,19 +51,20 @@ async function run() {
             res.send(result);
         })
 
-        /* app.put('/inventory/:id', async (req, res) => {
+        app.put('/inventory/:id', async (req, res) => {
             const id = req.params.id;
+            const quantityUpdate = req.body;
             const query = { _id: ObjectId(id) };
             const options = { upsert: true };
             const updateDoc = {
                 $set: {
-
+                    quantity: quantityUpdate.quantity
                 },
             };
-            const result = await inventoriesCollection.updateOne(filter, updateDoc, options);
+            const result = await inventoriesCollection.updateOne(query, updateDoc, options);
 
-            res.send(inventory);
-        }) */
+            res.send(result);
+        })
 
     }
     finally {
