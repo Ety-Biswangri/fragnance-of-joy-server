@@ -36,7 +36,7 @@ async function run() {
         await client.connect();
         const inventoriesCollection = client.db("fragnanceOfJoy").collection("inventories");
 
-        // AUTHORIZATION
+        // AUTHORIZATION API
         app.post('/login', (req, res) => {
             const userEmail = req.body;
             const accessToken = jwt.sign(userEmail, process.env.ACCESS_TOKEN_SECRET, {
@@ -71,22 +71,6 @@ async function run() {
                 res.status(403).send({ message: 'forbidden access' });
             }
         })
-
-        /* app.get('/inventories', verifyJWT, async (req, res) => {
-            const decodedEmail = req.decoded.email;
-            const email = req.body.email;
-
-            if (email === decodedEmail) {
-                const query = { email };
-                const cursor = inventoriesCollection.find(query);
-                const items = await cursor.toArray();
-
-                res.send(items);
-            }
-            else {
-                res.status(403).send({ message: 'forbidden access' });
-            }
-        }) */
 
         app.get('/inventory/:id', async (req, res) => {
             const id = req.params.id;
