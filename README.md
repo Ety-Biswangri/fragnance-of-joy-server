@@ -1,6 +1,6 @@
 # Project Name: Fragnance Of Joy
 
-Live Website Link: [Fragnance Of Joy](https://fragnance-of-joy.firebaseapp.com/)
+Live Website Link: [Fragnance Of Joy](https://fragnance-of-joy.web.app/)
 
 
 ## Project Description
