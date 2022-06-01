@@ -1,6 +1,6 @@
-# Project Name: Fragnance Of Joy
+# Project Name: Fragrance Of Joy
 
-Live Website Link: [Fragnance Of Joy](https://fragnance-of-joy.web.app/)
+Live Website Link: [Fragrance Of Joy](https://fragnance-of-joy.web.app/)
 
 
 ## Project Description
