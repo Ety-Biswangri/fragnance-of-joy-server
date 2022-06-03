@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({ origin: 'https://fragnance-of-joy.web.app/' }));
 app.use(express.json());
 
 
